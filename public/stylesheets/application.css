@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+}
+
+#container {
+  width: 800px;
+  margin: auto;
+}
+
+#header {
+
+}
+
+#main-content {
+  float: left;
+  width: 560px;
+  padding: 20px;
+}
+
+#side-bar {
+  float: left;
+  width: 200px;
+  padding: 20px;
+}
+
+.clear {
+  clear: both;
+}
+
+#footer {
+
+}
+
+.content-block {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    background-color: #fff;    
+    border: #DDD 1px solid;
+    
+	  border-radius: 10px 10px;
+	  moz-border-radius: 10px 10px;
+
+    box-shadow: 3px 3px 3px #888;
+    moz-box-shadow: 3px 3px 3px #888;
+}

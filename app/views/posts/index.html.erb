@@ -1,29 +1,22 @@
-<h1>Listing posts</h1>
+<% content_for :main_content do %>
 
-<table>
-  <tr>
-    <th>Author</th>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.author %></td>
-    <td><%= post.title %></td>
-    <td><%= post.content %></td>
-    <td><%= post.date %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<%= link_to 'New Post', new_post_path %>
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
+<% @posts.each do |post| %>
+  <div class="content-block">
+    <%= post.title %>
+    <br />
+    <%= post.author %> on
+    <%= post.date.to_formatted_s(:long_ordinal) %>
+    <p>
+    <%= post.content %>
+    </p>
+    <%= link_to 'Show', post %>
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+  </div>
+<% end %>
+
+<% end %>
