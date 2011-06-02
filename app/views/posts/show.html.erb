@@ -19,6 +19,11 @@
   <b>Date:</b>
   <%= @post.date %>
 </p>
+ 
+<p>
+  <b>Tags:</b>
+  <%= join_tags(@post) %>
+</p>
 
 <h2>Comments</h2>
 <%= render :partial => "comments/comment",
