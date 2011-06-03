@@ -1,1 +1,8 @@
-sidebar
+<div class="content-block">
+  Tags:
+  <br />  
+  <% Tag.all.each do |t| %>
+  <%= link_to t.name, t %>
+  <br />
+  <% end %>
+</div>

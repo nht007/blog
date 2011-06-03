@@ -9,4 +9,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def sidebar_tags
+    Tag.all
+  end
 end

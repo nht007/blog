@@ -1,21 +1,21 @@
 <% content_for :main_content do %>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path %> 
 
 <br />
 
 <% @posts.each do |post| %>
   <div class="content-block">
-    <%= post.title %>
-    <br />
-    <%= post.author %> on
-    <%= post.date.to_formatted_s(:long_ordinal) %>
+    <h3><%= link_to post.title, post %></h3>
+    Posted by <%= post.author %> on
+    <%= post.date %>
     <p>
     <%= post.content %>
     </p>
-    <%= link_to 'Show', post %>
-    <%= link_to 'Edit', edit_post_path(post) %>
-    <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+    Tags: 
+    <% post.tags.each do |t| %>
+      <%= link_to t.name, t %> 
+    <% end %>
   </div>
 <% end %>
 
