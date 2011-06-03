@@ -43,8 +43,9 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
+    @post.author = 'tien'
+    @post.date = Time.new
     @post.tag_list = params[:post][:tag_list]
-    # @post.tag_list = "woo, wee, waa"
     @post.save
     
     respond_to do |format|
@@ -62,7 +63,9 @@ class PostsController < ApplicationController
   # PUT /posts/1.xml
   def update
     @post = Post.find(params[:id])
-
+    @post.tag_list = params[:post][:tag_list]
+    @post.save
+    
     respond_to do |format|
       if @post.update_attributes(params[:post])
         format.html { redirect_to(@post, :notice => 'Post was successfully updated.') }

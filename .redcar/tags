@@ -1,4 +1,4 @@
-1307136128
+1307136669
 ActsAsTaggableOnMigration	/home/tien/programming/blog/db/migrate/20110603203326_acts_as_taggable_on_migration.rb	class ActsAsTaggableOnMigration 
 Application	/home/tien/programming/blog/config/application.rb	  class Application 
 ApplicationController	/home/tien/programming/blog/app/controllers/application_controller.rb	class ApplicationController 

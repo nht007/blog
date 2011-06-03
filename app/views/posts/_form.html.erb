@@ -10,8 +10,6 @@
   </div>
   <% end %>
 
-  <% post_form.hidden_field(:author, {:value => 'tien'}) %>
-  <% post_form.hidden_field(:date, {:value => Time.new}) %>  
   <div class="field">
     <%= post_form.label :title %><br />
     <%= post_form.text_field :title %>
