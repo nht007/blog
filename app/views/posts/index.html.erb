@@ -11,11 +11,7 @@
     <%= post.date %>
     <p>
     <%= simple_format(post.content) %>
-    </p>
-    Tags: 
-    <% post.tags.each do |t| %>
-      <%= link_to t.name, t %> 
-    <% end %>
+  </p>
   </div>
 <% end %>
 

@@ -1,4 +1,5 @@
-1307129445
+1307133416
+ActsAsTaggableOnMigration	/home/tien/programming/blog/db/migrate/20110603203326_acts_as_taggable_on_migration.rb	class ActsAsTaggableOnMigration 
 Application	/home/tien/programming/blog/config/application.rb	  class Application 
 ApplicationController	/home/tien/programming/blog/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/tien/programming/blog/app/helpers/application_helper.rb	module ApplicationHelper
@@ -14,6 +15,8 @@ CreateComments	/home/tien/programming/blog/db/migrate/20110602142433_create_comm
 CreatePostTagTable	/home/tien/programming/blog/db/migrate/20110602195945_create_post_tag_table.rb	class CreatePostTagTable 
 CreatePosts	/home/tien/programming/blog/db/migrate/20110602141144_create_posts.rb	class CreatePosts 
 CreateTags	/home/tien/programming/blog/db/migrate/20110602144231_create_tags.rb	class CreateTags 
+DropPostsTags	/home/tien/programming/blog/db/migrate/20110603201628_drop_posts_tags.rb	class DropPostsTags 
+DropTags	/home/tien/programming/blog/db/migrate/20110603201432_drop_tags.rb	class DropTags 
 Post	/home/tien/programming/blog/app/models/post.rb	class Post 
 PostTest	/home/tien/programming/blog/test/unit/post_test.rb	class PostTest 
 PostsController	/home/tien/programming/blog/app/controllers/posts_controller.rb	class PostsController 
@@ -21,9 +24,7 @@ PostsControllerTest	/home/tien/programming/blog/test/functional/posts_controller
 PostsHelper	/home/tien/programming/blog/app/helpers/posts_helper.rb	module PostsHelper
 PostsHelperTest	/home/tien/programming/blog/test/unit/helpers/posts_helper_test.rb	class PostsHelperTest 
 Str	/home/tien/programming/blog/public/javascripts/prototype.js	function Str(key, holder, stack)
-Tag	/home/tien/programming/blog/app/models/tag.rb	class Tag 
 TagTest	/home/tien/programming/blog/test/unit/tag_test.rb	class TagTest 
-TagsController	/home/tien/programming/blog/app/controllers/tags_controller.rb	class TagsController 
 TestCase	/home/tien/programming/blog/test/test_helper.rb	class ActiveSupport::TestCase
 Type	/home/tien/programming/blog/public/javascripts/prototype.js	function Type(o)
 abs	/home/tien/programming/blog/public/javascripts/prototype.js	function abs()
@@ -52,7 +53,6 @@ concat	/home/tien/programming/blog/public/javascripts/prototype.js	function conc
 copy	/home/tien/programming/blog/public/javascripts/prototype.js	function copy(methods, destination, onlyIfAbsent)
 create	/home/tien/programming/blog/app/controllers/comments_controller.rb	  def create
 create	/home/tien/programming/blog/app/controllers/posts_controller.rb	  def create
-create	/home/tien/programming/blog/app/controllers/tags_controller.rb	  def create
 create	/home/tien/programming/blog/public/javascripts/prototype.js	function create()
 cssNameFor	/home/tien/programming/blog/public/javascripts/prototype.js	function cssNameFor(key)
 cumulativeOffset	/home/tien/programming/blog/public/javascripts/prototype.js	function cumulativeOffset(element)
@@ -72,6 +72,9 @@ down	/home/tien/programming/blog/db/migrate/20110602141144_create_posts.rb	  def
 down	/home/tien/programming/blog/db/migrate/20110602142433_create_comments.rb	  def self.down
 down	/home/tien/programming/blog/db/migrate/20110602144231_create_tags.rb	  def self.down
 down	/home/tien/programming/blog/db/migrate/20110602195945_create_post_tag_table.rb	  def self.down
+down	/home/tien/programming/blog/db/migrate/20110603201432_drop_tags.rb	  def self.down
+down	/home/tien/programming/blog/db/migrate/20110603201628_drop_posts_tags.rb	  def self.down
+down	/home/tien/programming/blog/db/migrate/20110603203326_acts_as_taggable_on_migration.rb	  def self.down
 each	/home/tien/programming/blog/public/javascripts/prototype.js	function each(iterator)
 each	/home/tien/programming/blog/public/javascripts/prototype.js	function each(iterator, context)
 eachSlice	/home/tien/programming/blog/public/javascripts/prototype.js	function eachSlice(number, iterator, context)
@@ -156,7 +159,6 @@ merge	/home/tien/programming/blog/public/javascripts/prototype.js	function merge
 merge	/home/tien/programming/blog/public/javascripts/prototype.js	function merge(object)
 methodize	/home/tien/programming/blog/public/javascripts/prototype.js	function methodize()
 min	/home/tien/programming/blog/public/javascripts/prototype.js	function min(iterator, context)
-name?	/home/tien/programming/blog/app/models/tag.rb	def name?
 new	/home/tien/programming/blog/app/controllers/posts_controller.rb	  def new
 observe	/home/tien/programming/blog/public/javascripts/prototype.js	function observe(element, eventName, handler)
 on	/home/tien/programming/blog/public/javascripts/prototype.js	function on(element, eventName, selector, callback)
@@ -180,7 +182,6 @@ select	/home/tien/programming/blog/public/javascripts/prototype.js	function sele
 select	/home/tien/programming/blog/public/javascripts/prototype.js	function select(selector, scope)
 set	/home/tien/programming/blog/public/javascripts/prototype.js	function set(key, value)
 show	/home/tien/programming/blog/app/controllers/posts_controller.rb	  def show
-show	/home/tien/programming/blog/app/controllers/tags_controller.rb	  def show
 sidebar_tags	/home/tien/programming/blog/app/controllers/application_controller.rb	  def sidebar_tags
 size	/home/tien/programming/blog/public/javascripts/prototype.js	function size()
 size	/home/tien/programming/blog/public/javascripts/prototype.js	function size()
@@ -225,6 +226,9 @@ up	/home/tien/programming/blog/db/migrate/20110602141144_create_posts.rb	  def s
 up	/home/tien/programming/blog/db/migrate/20110602142433_create_comments.rb	  def self.up
 up	/home/tien/programming/blog/db/migrate/20110602144231_create_tags.rb	  def self.up
 up	/home/tien/programming/blog/db/migrate/20110602195945_create_post_tag_table.rb	  def self.up
+up	/home/tien/programming/blog/db/migrate/20110603201432_drop_tags.rb	  def self.up
+up	/home/tien/programming/blog/db/migrate/20110603201628_drop_posts_tags.rb	  def self.up
+up	/home/tien/programming/blog/db/migrate/20110603203326_acts_as_taggable_on_migration.rb	  def self.up
 update	/home/tien/programming/blog/app/controllers/posts_controller.rb	  def update
 update	/home/tien/programming/blog/public/javascripts/prototype.js	function update(array, args)
 update	/home/tien/programming/blog/public/javascripts/prototype.js	function update(element, content)

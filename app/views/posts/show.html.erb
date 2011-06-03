@@ -9,10 +9,6 @@
   <p>
     <%= simple_format(@post.content) %>
   </p>
-  Tags:
-  <% @post.tags.each do |t| %>
-  <%= link_to t.name, t %>
-  <% end %>  
 </div>
 <div class="content-block">
   <h3>Comments</h3>
