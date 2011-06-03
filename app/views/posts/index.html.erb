@@ -10,7 +10,7 @@
     Posted by <%= post.author %> on
     <%= post.date %>
     <p>
-    <%= post.content %>
+    <%= simple_format(post.content) %>
     </p>
     Tags: 
     <% post.tags.each do |t| %>
