@@ -44,4 +44,6 @@ body {
 
   box-shadow: 3px 3px 3px #888;
   moz-box-shadow: 3px 3px 3px #888;
+  
+  word-wrap:break-word;
 }

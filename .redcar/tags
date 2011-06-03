@@ -1,4 +1,4 @@
-1307117710
+1307128652
 Application	/home/tien/programming/blog/config/application.rb	  class Application 
 ApplicationController	/home/tien/programming/blog/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/tien/programming/blog/app/helpers/application_helper.rb	module ApplicationHelper

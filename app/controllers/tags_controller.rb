@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+  before_filter :authenticate, :except => [:index, :show]
+  
   def show
     @tag = Tag.find_by_id(params[:id])
     if @tag.nil?
