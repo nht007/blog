@@ -1,0 +1,29 @@
+<%= form_for(@post) do |post_form| %>
+  <% if @post.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <% post_form.hidden_field(:author, {:value => 'tien'}) %>
+  <% post_form.hidden_field(:date, {:value => Time.new}) %>  
+  <div class="field">
+    <%= post_form.label :title %><br />
+    <%= post_form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= post_form.label :content %><br />
+    <%= post_form.text_area :content, :rows => 20, :cols => 60 %>
+  </div>
+  <div class="field">
+    <%= post_form.text_field :tag_list %>
+  </div>
+  <div class="actions">
+    <%= post_form.submit %>
+  </div>
+<% end %>

@@ -43,7 +43,10 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
-
+    @post.tag_list = params[:post][:tag_list]
+    # @post.tag_list = "woo, wee, waa"
+    @post.save
+    
     respond_to do |format|
       if @post.save
         format.html { redirect_to(@post, :notice => 'Post was successfully created.') }

@@ -11,7 +11,11 @@
     <%= post.date %>
     <p>
     <%= simple_format(post.content) %>
-  </p>
+    </p>
+    Tags:
+    <% post.tags.each do |tag|%>
+      <%= tag.name %> 
+    <% end %>
   </div>
 <% end %>
 
