@@ -1,9 +1,10 @@
 body {
   font-family: sans-serif;
+  font-size: 0.8em;
 }
 
 #container {
-  width: 800px;
+  width: 640px;
   margin: auto;
 }
 
@@ -13,14 +14,14 @@ body {
 
 #main-content {
   float: left;
-  width: 560px;
-  padding: 20px;
+  width: 448px;
+  padding: 16px;
 }
 
 #sidebar {
   float: right;
-  width: 160px;
-  padding: 20px;
+  width: 128px;
+  padding: 16px;
 }
 
 .clear {
@@ -32,9 +33,9 @@ body {
 }
 
 .content-block {
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 
   background-color: #fff;    
   border: #DDD 1px solid;
