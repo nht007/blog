@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def sidebar_tags
-    Tag.all
+  def tag_cloud
+    @tags = Post.tag_counts_on(:tags)
   end
 end

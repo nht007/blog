@@ -1,4 +1,4 @@
-1307136669
+1307321280
 ActsAsTaggableOnMigration	/home/tien/programming/blog/db/migrate/20110603203326_acts_as_taggable_on_migration.rb	class ActsAsTaggableOnMigration 
 Application	/home/tien/programming/blog/config/application.rb	  class Application 
 ApplicationController	/home/tien/programming/blog/app/controllers/application_controller.rb	class ApplicationController 
@@ -182,7 +182,6 @@ select	/home/tien/programming/blog/public/javascripts/prototype.js	function sele
 select	/home/tien/programming/blog/public/javascripts/prototype.js	function select(selector, scope)
 set	/home/tien/programming/blog/public/javascripts/prototype.js	function set(key, value)
 show	/home/tien/programming/blog/app/controllers/posts_controller.rb	  def show
-sidebar_tags	/home/tien/programming/blog/app/controllers/application_controller.rb	  def sidebar_tags
 size	/home/tien/programming/blog/public/javascripts/prototype.js	function size()
 size	/home/tien/programming/blog/public/javascripts/prototype.js	function size()
 sortBy	/home/tien/programming/blog/public/javascripts/prototype.js	function sortBy(iterator, context)
@@ -198,6 +197,7 @@ sub	/home/tien/programming/blog/public/javascripts/prototype.js	function sub(pat
 subclass	/home/tien/programming/blog/public/javascripts/prototype.js	function subclass()
 succ	/home/tien/programming/blog/public/javascripts/prototype.js	function succ()
 succ	/home/tien/programming/blog/public/javascripts/prototype.js	function succ()
+tag_cloud	/home/tien/programming/blog/app/controllers/application_controller.rb	  def tag_cloud
 test_homepage	/home/tien/programming/blog/test/performance/browsing_test.rb	  def test_homepage
 times	/home/tien/programming/blog/public/javascripts/prototype.js	function times(count)
 times	/home/tien/programming/blog/public/javascripts/prototype.js	function times(iterator, context)
