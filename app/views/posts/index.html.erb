@@ -16,7 +16,7 @@
     <% post.tags.each do |tag|%>
       <%= tag.name %> 
     <% end %>
-    <div style="float: right"><%= post.comments.count %> comment(s)</div>
+    <div style="float: right"><%= link_to "#{post.comments.count} comment(s)", post_path(post, :anchor => "comments") %></div>
     <br />
   </div>
 <% end %>
