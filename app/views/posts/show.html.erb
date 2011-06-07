@@ -19,7 +19,7 @@
   <%= link_to 'Back', posts_path %>
 </div>
 <div class="content-block">
-  <h3>Comments</h3>
+  <h3><%= @post.comments.count %> Comment(s)</h3>
   <%= render :partial => "comments/comment",
             :collection => @post.comments %>
 

@@ -16,6 +16,8 @@
     <% post.tags.each do |tag|%>
       <%= tag.name %> 
     <% end %>
+    <br />
+    <%= post.comments.count %> comment(s)
   </div>
 <% end %>
 <% end %>
