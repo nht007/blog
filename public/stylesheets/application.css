@@ -7,6 +7,10 @@ body {
   margin: 0px;
 }
 
+#notice {
+  margin: 0px;
+}
+
 a {
   color: #444;
   text-decoration: none;
