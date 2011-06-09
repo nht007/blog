@@ -1,9 +1,5 @@
 <% content_for :main_content do %>
 
-<%= link_to 'New Post', new_post_path %> 
-
-<br />
-
 <% @posts.each do |post| %>
   <div class="content-block">
     <h3><%= link_to post.title, post %></h3>

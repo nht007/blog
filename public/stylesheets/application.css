@@ -1,6 +1,21 @@
 body {
-  font-family: sans-serif;
+  font-family: serif;
   font-size: 0.8em;
+  color: #444;
+  
+  background-color: #222;
+  margin: 0px;
+}
+
+a {
+  color: #444;
+  text-decoration: none;
+  text-shadow: #ddd 1px 1px 0px;
+}
+
+
+a:hover {
+  text-decoration: underline;
 }
 
 textarea {
@@ -11,10 +26,36 @@ textarea {
 #container {
   width: 640px;
   margin: auto;
+  margin-top: 50px;
+  
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+  border-top: #ddd 2px solid;
+  border-left: #ddd 2px solid;
+  border-right: #ddd 2px solid;
+  background-color: #fff;
 }
 
 #header {
+  border-bottom: #ddd 1px solid;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
 
+#header h1 {
+  margin-bottom: 5px;
+}
+
+#subtitle {
+  color: #888;
+  margin-left: 10px;
+}
+
+#new-post {
+  float: right;
 }
 
 #main-content {
@@ -39,14 +80,10 @@ textarea {
 
 .content-block {
   padding: 16px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 
   background-color: #fff;    
   border: #DDD 1px solid;
-    
-	border-radius: 10px 10px;
-	moz-border-radius: 10px 10px;
 
   box-shadow: 3px 3px 3px #888;
   moz-box-shadow: 3px 3px 3px #888;
