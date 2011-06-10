@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).order("date DESC")
     else
-      @posts = Post.all.reverse
+      @posts = Post.all.order("date DESC")
     end
 
     respond_to do |format|
