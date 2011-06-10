@@ -5,9 +5,9 @@ class PostsController < ApplicationController
   # GET /posts.xml
   def index
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag]).order("date DESC")
+      @posts = Post.tagged_with(params[:tag]).order("created_at DESC")
     else
-      @posts = Post.order("date DESC")
+      @posts = Post.order("created_at DESC")
     end
 
     respond_to do |format|
