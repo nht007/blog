@@ -1,10 +1,12 @@
 <% content_for :main_content do %>
 
+<div class="content-block">
 <h1>Editing post</h1>
 
 <%= render 'form' %>
-
+<br />
 <%= link_to 'Show', @post %> |
 <%= link_to 'Back', posts_path %>
+</div>
 
 <% end %>
