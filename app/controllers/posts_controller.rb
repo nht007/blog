@@ -4,7 +4,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.all.reverse
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag]).reverse
+    else
+      @posts = Post.all.reverse
+    end
 
     respond_to do |format|
       format.html # index.html.erb
