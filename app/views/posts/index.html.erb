@@ -3,8 +3,8 @@
 <% @posts.each do |post| %>
   <div class="content-block">
     <h3><%= link_to post.title, post %></h3>
-    Posted by <%= post.author %> at
-    <%= post.date %>
+    Posted by <%= post.author %> on
+    <%= post.created_at.strftime('%B %e, %G') %> at <%= post.created_at.strftime('%X') %>
     <p>
     <%= simple_format(post.content) %>
     </p>

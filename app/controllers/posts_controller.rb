@@ -48,8 +48,7 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
-    @post.author = 'tien'
-    @post.date = Time.new
+    @post.author = 'Tien H. Nguyen'
     @post.tag_list = params[:post][:tag_list]
     @post.save
     
@@ -68,6 +67,7 @@ class PostsController < ApplicationController
   # PUT /posts/1.xml
   def update
     @post = Post.find(params[:id])
+    @post.author = 'Tien H. Nguyen'
     @post.tag_list = params[:post][:tag_list]
     @post.save
     
