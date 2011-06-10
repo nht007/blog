@@ -109,6 +109,15 @@ textarea {
   word-wrap: break-word;
 }
 
+.comment-block {
+  padding-bottom: 10px;
+  border-bottom: #ddd 1px solid;
+}
+
+.comment-form {
+  margin-top: 30px;
+}
+
 .cloud1 { font-size: 0.7em; }
 .cloud2 { font-size: 1.0em; }
 .cloud3 { font-size: 1.3em; }

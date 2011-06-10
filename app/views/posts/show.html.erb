@@ -4,16 +4,17 @@
 
 <div class="content-block">
   <h3><%= link_to @post.title, @post %></h3>
-  Posted by <%= @post.author %> on
+  Posted by <%= @post.author %> at
   <%= @post.date %>
   <p>
     <%= simple_format(@post.content) %>
   </p>
+  <div class="post-info">
   Tags:
   <% @post.tags.each do |tag|%>
     <%= tag.name %>
   <% end %>
-  
+  </div>
   <br />
   <%= link_to 'Edit', edit_post_path(@post) %> |
   <%= link_to 'Back', posts_path %>
@@ -22,9 +23,10 @@
   <h3><%= @post.comments.count %> Comment(s)</h3>
   <%= render :partial => "comments/comment",
             :collection => @post.comments %>
-
+            
+<div class="comment-form">
   <h3>Add a comment:</h3>
   <%= render "comments/form" %>
-  
+</div>
 </div>
 <% end %>
