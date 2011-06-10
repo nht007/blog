@@ -68,6 +68,19 @@ textarea {
   padding: 16px;
 }
 
+#main-content h3 {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+
+  border-bottom: #ddd 1px solid;
+}
+
+.post-info {
+  padding-top: 5px;
+
+  border-top: #ddd 1px solid;
+}
+
 #sidebar {
   float: right;
   width: 128px;

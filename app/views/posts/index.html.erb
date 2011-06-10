@@ -8,12 +8,13 @@
     <p>
     <%= simple_format(post.content) %>
     </p>
+    <div class="post-info">
     Tags:
     <% post.tags.each do |tag|%>
       <%= tag.name %> 
     <% end %>
     <div style="float: right"><%= link_to "#{post.comments.count} comment(s)", post_path(post, :anchor => "comments") %></div>
-    <br />
+    </div>
   </div>
 <% end %>
 <% end %>
