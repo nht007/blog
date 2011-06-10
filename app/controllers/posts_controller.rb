@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.xml
   def index
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
+      @posts = Post.tagged_with(params[:tag]).order("date DESC")
     else
       @posts = Post.all.reverse
     end
