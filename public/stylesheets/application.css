@@ -81,6 +81,15 @@ textarea {
   border-top: #ddd 1px solid;
 }
 
+.tags {
+  float: left; 
+  width: 75%;
+}
+
+.comment-count {
+  float: right;
+}
+
 #sidebar {
   float: right;
   width: 128px;

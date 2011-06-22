@@ -8,6 +8,7 @@ gem 'rake', '0.8.7'
 
 gem 'sqlite3'
 gem 'acts-as-taggable-on'
+gem 'authlogic'
 
 # Use unicorn as the web server
 # gem 'unicorn'

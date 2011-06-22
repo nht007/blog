@@ -9,12 +9,16 @@
     <%= simple_format(post.content) %>
     </p>
     <div class="post-info">
+    
+    <div class="tags">
     Tags:
     <% post.tags.each do |tag|%>
       <%= link_to tag.name, { :tag => tag.name } %> 
     <% end %>
-    <div style="float: right"><%= link_to "#{post.comments.count} comment(s)", post_path(post, :anchor => "comments") %></div>
     </div>
+    <div class="comment-count"><%= link_to "#{post.comments.count} comment(s)", post_path(post, :anchor => "comments") %></div>
+    </div>
+    <div class="clear"></div>
   </div>
 <% end %>
 <% end %>
